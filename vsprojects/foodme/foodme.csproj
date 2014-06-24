@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F344198-6071-4A73-BFFF-45CBA9959CF6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>foodme</RootNamespace>
+    <AssemblyName>foodme</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\Ubuntu.font" />
+    <Content Include="css\Ubuntu.ttf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\.gitignore" />
+    <Content Include="css\app.css" />
+    <Content Include="css\bootstrap-united.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="img\.gitignore" />
+    <Content Include="img\100x100.gif" />
+    <Content Include="img\150x150.gif" />
+    <Content Include="img\customer_bkg.jpg" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\restaurants\angular.jpg" />
+    <Content Include="img\restaurants\babythai.jpg" />
+    <Content Include="img\restaurants\bateaurouge.jpg" />
+    <Content Include="img\restaurants\beans.jpg" />
+    <Content Include="img\restaurants\beijing.jpg" />
+    <Content Include="img\restaurants\bhangra.jpg" />
+    <Content Include="img\restaurants\burgerama.jpg" />
+    <Content Include="img\restaurants\cancun.jpg" />
+    <Content Include="img\restaurants\carthage.jpg" />
+    <Content Include="img\restaurants\currygalore.jpg" />
+    <Content Include="img\restaurants\curryup.jpg" />
+    <Content Include="img\restaurants\czechpoint.jpg" />
+    <Content Include="img\restaurants\dragon.jpg" />
+    <Content Include="img\restaurants\esthers.jpg" />
+    <Content Include="img\restaurants\flavia.jpg" />
+    <Content Include="img\restaurants\jeeves.jpg" />
+    <Content Include="img\restaurants\khartoum.jpg" />
+    <Content Include="img\restaurants\kohlhaus.jpg" />
+    <Content Include="img\restaurants\littlepigs.jpg" />
+    <Content Include="img\restaurants\littleprague.jpg" />
+    <Content Include="img\restaurants\luigis.jpg" />
+    <Content Include="img\restaurants\naansequitur.jpg" />
+    <Content Include="img\restaurants\north.jpg" />
+    <Content Include="img\restaurants\pedros.jpg" />
+    <Content Include="img\restaurants\pizza76.jpg" />
+    <Content Include="img\restaurants\robatayaki.jpg" />
+    <Content Include="img\restaurants\sakura.jpg" />
+    <Content Include="img\restaurants\sallys.jpg" />
+    <Content Include="img\restaurants\satay.jpg" />
+    <Content Include="img\restaurants\saucy.jpg" />
+    <Content Include="img\restaurants\shandong.jpg" />
+    <Content Include="img\restaurants\speisewagen.jpg" />
+    <Content Include="img\restaurants\superwonton.jpg" />
+    <Content Include="img\restaurants\taqueria.jpg" />
+    <Content Include="img\restaurants\thick.jpg" />
+    <Content Include="img\restaurants\tofuparadise.jpg" />
+    <Content Include="img\restaurants\wheninrome.jpg" />
+    <Content Include="img\restaurants\wholetamale.jpg" />
+    <Content Include="img\restaurants\zardoz.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\app.js" />
+    <Content Include="js\controllers\CheckoutController.js" />
+    <Content Include="js\controllers\CustomerController.js" />
+    <Content Include="js\controllers\MenuController.js" />
+    <Content Include="js\controllers\NavbarController.js" />
+    <Content Include="js\controllers\RestaurantsController.js" />
+    <Content Include="js\controllers\ThankYouController.js" />
+    <Content Include="js\directives\fmCheckboxList.js" />
+    <Content Include="js\directives\fmDeliverTo.html" />
+    <Content Include="js\directives\fmDeliverTo.js" />
+    <Content Include="js\directives\fmRating.js" />
+    <Content Include="js\filters\dollars.js" />
+    <Content Include="js\filters\stars.js" />
+    <Content Include="js\services\alert.js" />
+    <Content Include="js\services\cart.js" />
+    <Content Include="js\services\customer.js" />
+    <Content Include="js\services\localStorage.js" />
+    <Content Include="js\services\Restaurant.js" />
+    <Content Include="lib\angular\angular-cookies.js" />
+    <Content Include="lib\angular\angular-cookies.min.js" />
+    <Content Include="lib\angular\angular-loader.js" />
+    <Content Include="lib\angular\angular-loader.min.js" />
+    <Content Include="lib\angular\angular-resource.js" />
+    <Content Include="lib\angular\angular-resource.min.js" />
+    <Content Include="lib\angular\angular-sanitize.js" />
+    <Content Include="lib\angular\angular-sanitize.min.js" />
+    <Content Include="lib\angular\angular.js" />
+    <Content Include="lib\angular\angular.min.js" />
+    <Content Include="lib\angular\version.txt" />
+    <Content Include="views\.gitignore" />
+    <Content Include="views\checkout.html" />
+    <Content Include="views\customer.html" />
+    <Content Include="views\help.html" />
+    <Content Include="views\how-it-works.html" />
+    <Content Include="views\menu.html" />
+    <Content Include="views\restaurants.html" />
+    <Content Include="views\thank-you.html" />
+    <Content Include="views\who-we-are.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>29277</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:29277/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
