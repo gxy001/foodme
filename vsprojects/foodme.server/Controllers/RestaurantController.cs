@@ -12,7 +12,6 @@ using System.Web.Http.Cors;
 
 namespace foodme.server.Controllers
 {
-    [EnableCors("*", "*", "*")]
     public class RestaurantController : ApiController
     {
         Restaurant[] restaurants = null;
