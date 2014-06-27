@@ -21,9 +21,9 @@ foodMeApp.service('cart', function Cart(localStorage, customer, $rootScope, $htt
         }
       });
       if (item) {
-        item = angular.copy(item);
-        item.qty = 1;
-        self.items.push(item);
+        var cartItem = item;
+        cartItem.qty = 1;
+        self.items.push(cartItem);
       }
     } else {
       alert('Can not mix menu items from different restaurants.');
@@ -51,7 +51,7 @@ foodMeApp.service('cart', function Cart(localStorage, customer, $rootScope, $htt
 
   self.submitOrder = function() {
     if (self.items.length) {
-      return $http.post('/api/order', {
+      return $http.post('http://localhost:' + portNumber +'/api/order', {
         items: self.items,
         restaurant: self.restaurant,
         payment: self.payment,
@@ -75,10 +75,10 @@ foodMeApp.service('cart', function Cart(localStorage, customer, $rootScope, $htt
   self.payment = {}; // don't keep CC info in localStorage
 
 
-  function createPersistentProperty(localName, storageName, Type) {
+  function createPersistentProperty(localName, storageName, dataType) {
     var json = localStorage[storageName];
 
-    self[localName] = json ? JSON.parse(json) : new Type;
+    self[localName] = json ? JSON.parse(json) : new dataType;
 
     $rootScope.$watch(
         function() { return self[localName]; },
