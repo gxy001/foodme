@@ -3,23 +3,26 @@
 foodMeApp.controller('RestaurantsController',
     function RestaurantsController($scope, customer, $location, Restaurant) {
 
+//if the customer hasn't input the address yet, redirect them to the customer page to input the address.
   if (!customer.address) {
     $location.url('/customer');
   }
 
-  var filter = $scope.filter = {
+//get all the Restaurants data and set up the query.
+ var allRestaurants = Restaurant.query(filterAndSortRestaurants);
+
+ var filter = $scope.filter = {
     cuisine: [],
     price: null,
     rating: null
   };
 
-  var allRestaurants = Restaurant.query(filterAndSortRestaurants);
+//register a listener to re-run the query when filter obejct value changes.
   $scope.$watch('filter', filterAndSortRestaurants, true);
 
   function filterAndSortRestaurants() {
     $scope.restaurants = [];
-
-    // filter
+    // filter using Angular's angular.foreach() function
     angular.forEach(allRestaurants, function(item, key) {
       if (filter.price && filter.price !== item.price) {
         return;
@@ -37,7 +40,7 @@ foodMeApp.controller('RestaurantsController',
     });
 
 
-    // sort
+    // sort JS' array.sort() function
     $scope.restaurants.sort(function(a, b) {
       if (a[filter.sortBy] > b[filter.sortBy]) {
         return filter.sortAsc ? 1 : -1;
@@ -52,10 +55,14 @@ foodMeApp.controller('RestaurantsController',
   };
 
 
-  $scope.sortBy = function(key) {
+  $scope.sortBy = function (key) {
+//only one data column in the view can be selected for sorting.
+//if sorting has already been applied for the selected column, then reverse the sorting.
     if (filter.sortBy === key) {
       filter.sortAsc = !filter.sortAsc;
-    } else {
+    }
+//else, then initial the sorting for the selected column.
+    else {
       filter.sortBy = key;
       filter.sortAsc = true;
     }
