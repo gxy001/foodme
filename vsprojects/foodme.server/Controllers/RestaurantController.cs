@@ -47,20 +47,5 @@ namespace foodme.server.Controllers
             }
             return Ok(restaurant);
         }
-
-        // POST api/restaurant
-        public void PostRestaurant([FromBody]string value)
-        {
-        }
-
-        // PUT api/restaurant/5
-        public void PutRestaurant(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/restaurant/5
-        public void DeleteRestaurant(int id)
-        {
-        }
     }
 }

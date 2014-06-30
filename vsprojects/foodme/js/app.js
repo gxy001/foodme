@@ -1,5 +1,7 @@
 'use strict';
 
+var portNumber = ':31594';
+
 var foodMeApp = angular.module('foodMeApp', ['ngResource']);
 
 foodMeApp.config(function($routeProvider) {

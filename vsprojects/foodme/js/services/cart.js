@@ -51,7 +51,7 @@ foodMeApp.service('cart', function Cart(localStorage, customer, $rootScope, $htt
 
   self.submitOrder = function() {
     if (self.items.length) {
-      return $http.post('http://localhost:' + portNumber +'/api/order', {
+      return $http.post('http://localhost' + portNumber + '/api/order', {
         items: self.items,
         restaurant: self.restaurant,
         payment: self.payment,

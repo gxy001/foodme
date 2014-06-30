@@ -7,6 +7,10 @@ namespace foodme.server.Models
 {
     public class Order
     {
-        public String OrderId { get; set; }
+        public String orderId { get; set; }
+        public Restaurant restaurant { get; set; } 
+        public List<MenuItem> items { get; set; }
+        public Payment payment { get; set; }
+        public Customer deliverTo { get; set; }
     }
 }
