@@ -1,15 +1,14 @@
 # FoodMe App — a workshop app built with AngularJS
 
-Simplified meal ordering app for local restaurants built with AngularJS
-and node.js backend.
+This project is forked from a simplified meal ordering app for local restaurants built with AngularJS
+and node.js backend (https://github.com/IgorMinar/foodme) for experimental purpose.
 
-Check out this doc for more info about the app: http://goo.gl/Xa0Ea
+Updates in this forked project:
 
-Also check out the commit history to see how the app was built piece by piece:
+* Fixed the server code issue to use the latest node.js modules, including: logger —>
+morgan, bodyParser —> body-parser
+* Created a VS2013 solution (under vsproject folder) with the following:
+  * A client side project leveraging the content from the original app folder
+  * A server side project using WebAPI
 
-https://github.com/IgorMinar/foodme/commits/master
-
----
-
-The app is build on top of [angular-seed](http://github.com/angular/angular-seed),
-check out seed's README to understand what the scripts under `scripts/` are doing.
+To run the VS solution in the vsproject folder, the portnumber value (defined in app.js) needs to be updated to the right one from IIS Express on the local machine.
