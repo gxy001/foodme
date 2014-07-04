@@ -12,3 +12,14 @@ morgan, bodyParser —> body-parser
   * A server side project using WebAPI
 
 To run the VS solution in the vsproject folder, the portnumber value (defined in app.js) needs to be updated to the right one from IIS Express on the local machine.
+
+To run the original project, following the steps below:
+* Install server-side dependencies (under the server folder)
+```
+npm install
+```
+* Start the server
+```
+node server.js
+```
+ This will start a Node.js server and open the default browser on http://localhost:3000, where the app should be served. 
