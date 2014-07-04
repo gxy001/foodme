@@ -20,6 +20,6 @@ npm install
 ```
 * Start the server
 ```
-node server.js
+node start.js
 ```
  This will start a Node.js server and open the default browser on http://localhost:3000, where the app should be served. 
